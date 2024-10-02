@@ -1,0 +1,96 @@
+body {
+    background-color: #ecf0f6;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .title {
+    text-align: center;
+    padding: 4rem;
+  }
+  
+  .list-container {
+    display: flex;
+    justify-content: space-around;
+    width: 45rem; /* 전체 리스트 너비 */
+    min-height: 300px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 20px;
+  }
+  
+  .input-field {
+    width: 35rem;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  
+  input::placeholder{
+      font-style: oblique; /* 글자 눕히기 */
+  }
+  
+  /* 버튼 */
+  .todobtn,
+  .donebtn {
+    background-color: #cfdbed;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  li {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      padding: 10px 0;
+      margin-bottom: 10px;
+    }
+  
+    /* 항목 아래 선 */
+    li::after {
+      content: "";
+      position: absolute;
+      bottom: -3px; /* 항목 아래쪽에 선 배치 */
+      left: 0;
+      width: 200px; /* 선의 길이 고정 */
+      height: 2px;
+      background-color: #CFDBED;
+    }
+  
+  /* 해야할일과 해낸일 제목 스타일 */
+  .list-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .list-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px; /* 각 열의 너비 고정 */
+    }
+  
+    .todo-text {
+      width: 140px; /* 고정된 텍스트 영역 너비 */
+      white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+      overflow: hidden; /* 넘치는 텍스트 숨김 */
+      text-overflow: ellipsis; /* 넘칠 경우 말줄임표 */
+      padding-right: 10px;
+      font-weight: bold;
+    }
+    
+  
